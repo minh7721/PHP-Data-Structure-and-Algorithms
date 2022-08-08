@@ -11,6 +11,7 @@ class ReadingList
         $this->limit = $limit;
     }
 
+    //Them mot gia tri vao dau ngan xep
     public function push($item) {
         // trap for stack overflow
         if (count($this->stack) < $this->limit) {
@@ -21,6 +22,7 @@ class ReadingList
         }
     }
 
+    //Loai bo gia tri cuoi cung duoc them vao ngan xep
     public function pop() {
         if ($this->isEmpty()) {
             // trap for stack underflow
@@ -31,10 +33,12 @@ class ReadingList
         }
     }
 
+    //Tra ve gia tri tren cung cua ngan xep
     public function top() {
         return current($this->stack);
     }
 
+    
     public function isEmpty() {
         return empty($this->stack);
     }
@@ -44,21 +48,25 @@ class ReadingList
 
 $myBooks = new ReadingList();
 
-$myBooks->push('A Dream of Spring');
-$myBooks->push('The Winds of Winter');
-$myBooks->push('A Dance with Dragons');
-$myBooks->push('A Feast for Crows');
-$myBooks->push('A Storm of Swords'); 
-$myBooks->push('A Clash of Kings');
-$myBooks->push('A Game of Thrones');
-$myBooks->push('A Game of Thrones');
-$myBooks->push('A Game of Thrones');
 
-// $myBooks->pop();
-// $myBooks->pop();
-// $myBooks->pop();
+$myBooks->push('So 1');
+$myBooks->push('So 2');
+$myBooks->push('So 3 ');
+$myBooks->push('So 4');
+$myBooks->push('So 5'); 
+$myBooks->push('So 6');
+$myBooks->push('So 7');
+$myBooks->push('So 8');
+$myBooks->push('So 9');
 
-// print_r($myBooks);
+//Xoa 3 gia tri vao cuoi cung cua ngan xep
+$myBooks->pop();
+$myBooks->pop();
+$myBooks->pop();
+
+echo "<pre>";
+print_r($myBooks);
+echo "</pre>";
 
 echo "<br>";
 echo $myBooks->top();

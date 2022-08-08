@@ -13,11 +13,12 @@ $myBooks->enqueue('So 5');
 $myBooks->enqueue('So 6');
 $myBooks->enqueue('So 7');
 
-echo $myBooks->dequeue();
+echo "Remove ".$myBooks->dequeue();
 echo "<br>";
-echo $myBooks->dequeue(); 
+echo "Remove ".$myBooks->dequeue(); 
 echo "<br>";
 
+echo "Hang doi sau khi remove 2 so vao truoc la: ";
 echo "<pre>";
 print_r($myBooks);
 echo "</pre>";
