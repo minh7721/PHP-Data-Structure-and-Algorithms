@@ -1,7 +1,6 @@
 <?php
 
 function icecreamParlor($t, $m1, $arr1, $m2, $arr2) {
-    // Write your code here
 	for($i = 0; $i < count($arr1); $i++){
 		for($j = $i+1; $j < count($arr1); $j++){
 			if($arr1[$i] + $arr1[$j] == $m1){

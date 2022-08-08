@@ -1,8 +1,8 @@
 <?php
 
+// Dem so lan xuat hien cua cac so trong mang
+
 function countingSort($arr) {
-    // Write your code here
-    
     $arrOut = array();
     for($i = 0; $i <= max($arr); $i++){
         $arrOut[$i] = 0;    

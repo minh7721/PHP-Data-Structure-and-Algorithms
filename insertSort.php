@@ -1,7 +1,8 @@
 <?php
 
+// In ra tung buoc sap xep trong thuat toan sap xep chen
+
 function insertionSort2($arr) {
-    // Write your code here
     for($i = 1; $i < count($arr) ; $i++){
         $temp = $arr[$i];
         $j = $i -1;

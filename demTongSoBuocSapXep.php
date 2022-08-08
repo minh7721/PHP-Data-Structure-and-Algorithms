@@ -1,7 +1,9 @@
 <?php
+//Dem so lan dich chuyen cua cac so khi sap xep bang cach sap xep chon
+
 function runningTime($arr) {
-$count = 0;
- for($i = 1; $i < count($arr) ; $i++){
+    $count = 0;
+    for($i = 1; $i < count($arr) ; $i++){
         $temp = $arr[$i];
         $j = $i -1;
         while($j >= 0 && $arr[$j] > $temp){

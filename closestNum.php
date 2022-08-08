@@ -1,4 +1,6 @@
 <?php
+//in ra hieu giua 2 so nho nhat
+
 function closestNumbers($arr) {
     sort($arr);
     $min = $arr[1] - $arr[0];

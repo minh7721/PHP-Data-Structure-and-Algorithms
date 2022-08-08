@@ -1,5 +1,7 @@
 <?php
 
+//Dem va sap xep so lan xuat hien cua cac so trong mang theo thu tu tang dan
+
 function countingSort($arr){
     $arrOut = array();
     for($i = 0; $i <= max($arr); $i++){

@@ -1,34 +1,37 @@
 <?php
+
+// Ngan xep
+
 class ReadingList
 {
     protected $stack;
     protected $limit;
     
     public function __construct($limit = 10) {
-        // initialize the stack
+        // Khoi tao ngan xep
         $this->stack = array();
-        // stack can only contain this many items
+        // Ngan xep chi co the chua toi da $limit phan tu
         $this->limit = $limit;
     }
 
     //Them mot gia tri vao dau ngan xep
     public function push($item) {
-        // trap for stack overflow
+        // Kiem tra full ngan xep
         if (count($this->stack) < $this->limit) {
-            // prepend item to the start of the array
+            // Them gia tri vao dau ngan xep
             array_unshift($this->stack, $item);
         } else {
-            throw new RunTimeException('Stack is full!'); 
+            throw new RunTimeException('Ngan xep da full!'); 
         }
     }
 
     //Loai bo gia tri cuoi cung duoc them vao ngan xep
     public function pop() {
         if ($this->isEmpty()) {
-            // trap for stack underflow
-	      throw new RunTimeException('Stack is empty!');
+            // Kiem tra ngan xep co phan tu nao khong
+	      throw new RunTimeException('Ngan xep khong co gi!');
 	  } else {
-            // pop item from the start of the array
+            // Xoa phan tu cuoi cung cua ngan xep
             return array_shift($this->stack);
         }
     }
@@ -38,7 +41,7 @@ class ReadingList
         return current($this->stack);
     }
 
-    
+
     public function isEmpty() {
         return empty($this->stack);
     }
@@ -47,7 +50,6 @@ class ReadingList
 
 
 $myBooks = new ReadingList();
-
 
 $myBooks->push('So 1');
 $myBooks->push('So 2');
