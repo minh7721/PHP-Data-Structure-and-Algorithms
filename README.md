@@ -12,10 +12,4 @@ Một số ý tưởng để phát triển bài tập:
 + 
 
 
-
-
-
-
-
-
 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
